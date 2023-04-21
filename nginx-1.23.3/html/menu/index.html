@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="https://www.hochypro.ru/" target="_blank">
+
+
+    <style type="text/css">
+        #container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+
+        /* Разделяем экран пополам */
+        .split_top {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 50%;
+            background-color: #fea402;
+            margin: auto;
+        }
+
+        .split_bottom {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #ef83e6;
+            margin: auto;
+        }
+
+        p {
+            color: #222629;
+            font-family: Comic Sans MS, sans-serif;
+            font-size: 80px;
+            position: relative;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-120%);
+        }
+
+        #b1 {
+            display: block;
+        }
+
+            #b1::hover {
+                "/page1.html"
+            }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <a id="b1" class="split_top">
+            <p>Хочу Проучиться</p>
+        </a>
+
+        <a id="b2" class="split_bottom">
+            <p>Хочу Пролениться</p>
+        </a>
+
+    </div>
+    <script type="text/javascript">
+    document.getElementById("b1").addEventListener('click', (event) => {alert("h00")})
+    document.getElementById("b2").addEventListener('click', (event) => {alert("h00")})
+    </script>
+</body>
+</html>
