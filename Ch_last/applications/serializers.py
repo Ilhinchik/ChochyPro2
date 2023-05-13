@@ -4,9 +4,9 @@ from .models import Application
 
 
 class ApplicationSerializer(serializers.Serializer):
-    discipline = serializers.CharField(max_length=50)
+    discipline = serializers.CharField(max_length=255)
     reason = serializers.CharField(max_length=255)
-    details = serializers.CharField(max_length=50)
+    details = serializers.CharField(max_length=255)
 
     user_id = serializers.IntegerField()
     

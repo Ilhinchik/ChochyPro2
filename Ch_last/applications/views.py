@@ -17,12 +17,13 @@ class ApplicationView(APIView):
         return Response({"applications": serializer.data})
 
     def post(self, request):
-        application = request.data.get('Application')
+        application = request.data.get('application')
+        print(application)
         # Create an article from the above data
         serializer = ApplicationSerializer(data=application, partial=True)
         if serializer.is_valid(raise_exception=True):
             application_saved = serializer.save()
-        return Response({"success": "Application '{}' created successfully".format(application_saved.title)})
+        return Response({"success": "Application '{}' created successfully".format(application_saved.discipline)})
 
     # def put(self, request, pk):
     #     saved_application = get_object_or_404(Application.objects.all(), pk=pk)
