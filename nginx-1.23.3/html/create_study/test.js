@@ -48,22 +48,25 @@ async function getResponse() {
 getResponse()
 
 function sendDataAndFill() {
-    let myValue = 'Study';
+    let discipline = document.getElementById('address').value;
+    let reason = document.getElementById('address2').value;
+    if (!discipline || !reason) {
+        console.log('Please fill out all required fields.');
+        return;
+    }
     let data = {
         'application': {
 
-            'discipline': document.getElementById('address').value,
-            'reason': document.getElementById('address2').value,
-            'details': myValue,
-            'user_id': 1,
-
-
+            'discipline': discipline,
+            'reason': reason,
+            'details': 'Study',
+            'user_id': 3,
         }
     }
     console.log('Sending data:', data);
     //document.getElementById("post-request").innerText = JSON.stringify(data, null, '    ');
 
-    let link = "http://localhost:8000/api/applications/";
+    let link = url;
     fetch(link, {
         method: 'POST',
         headers: {
@@ -150,8 +153,5 @@ function sendDataAndFill() {
 // выполнить действия после загрузки страницы
 window.onload = function () {
     getDataAndFill();
-    //sendDataAndFill();
+    sendDataAndFill();
 };
-
-
-

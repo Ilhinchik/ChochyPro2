@@ -124,21 +124,24 @@
 	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;"></svg>
 
 	<main class="form-entire w-200 m-auto text-appir">
-		<form action="http://localhost/LK/" target="_blank">
-			<img class="mb-4" src="http://localhost/logo.png" alt="" width="140" height="100">
-			<h1 class="h3 mb-3 fw-normal">Мы уже знакомы с тобой?</h1>
-			<div class="form-floating">
-				<input type="text" class="form-control" id="floatingInput3" placeholder="cleverStudent111">
-				<label for="floatingInput">Логин</label>
-			</div>
-			<div class="form-floating">
-				<input type="password" class="form-control" id="floatingPassword" placeholder="Пароль">
-				<label for="floatingPassword">Пароль</label>
-			</div>
 
+		<img class="mb-4" src="http://localhost/logo.png" alt="" width="140" height="100">
+		<h1 class="h3 mb-3 fw-normal">Мы уже знакомы с тобой?</h1>
+		<div class="form-floating">
+			<input type="text" class="form-control" id="floatingInput3" placeholder="cleverStudent111">
+			<label for="floatingInput">Логин</label>
+		</div>
+		<div class="form-floating">
+			<input type="password" class="form-control" id="floatingPassword" placeholder="Пароль">
+			<label for="floatingPassword">Пароль</label>
+		</div>
 
-			<button id="b1"  class="w-100 btn btn-lg btn-primary button button-design" type="submit">Войти</button>
+		<form action="http://localhost/registration/">
+			<button class="w-100 btn btn-lg btn-primary button button-design" type="submit" style="margin-bottom:2px; font-size: 15px;">Мы ещё не знакомы? Давай исправим это!</button>
 		</form>
+			<form action="http://localhost/menu/">
+				<button id="b1" class="w-100 btn btn-lg btn-primary button button-design" type="submit">Войти</button>
+			</form>
 	</main>
 
     <script>
